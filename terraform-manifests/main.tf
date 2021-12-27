@@ -28,10 +28,10 @@ terraform {
 
 # Terraform State Storage to Azure Storage Container
   backend "azurerm" {
-    #resource_group_name   = "terraform-storage-rg"
-    #storage_account_name  = "terraformstatexlrwdrzs"
-    #container_name        = "tfstatefiles"
-    #key                   = "terraform-custom-vnet.tfstate"
+    resource_group_name   = "nitinjainrg"
+    storage_account_name  = "njterraformstate"
+    container_name        = "tfstatefiles"
+    key                   = "terraform-custom-vnet.tfstate"
   }  
 }
 
@@ -39,9 +39,8 @@ terraform {
 
 # 2. Terraform Provider Block for AzureRM
 provider "azurerm" {
-  features {
-
-  }
+  subscription_id = "50850eab-4115-4a4c-9398-ca71bf531de8"  
+  features { }
 }
 
 # 3. Terraform Resource Block: Define a Random Pet Resource

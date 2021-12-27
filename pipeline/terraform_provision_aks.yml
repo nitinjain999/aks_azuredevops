@@ -81,9 +81,9 @@ stages:
                 command: 'init'
                 workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                 backendType: 'azurerm'
-                backendServiceArm: 'terraform-aks-azurerm-svc-con'
-                backendAzureRmResourceGroupName: 'terraform-storage-rg'
-                backendAzureRmStorageAccountName: 'terraformstatexlrwdrzs'
+                backendServiceArm: 'nitinjainazuredevopssvccon'
+                backendAzureRmResourceGroupName: 'nitinjainrg'
+                backendAzureRmStorageAccountName: 'njterraformstate'
                 backendAzureRmContainerName: 'tfstatefiles'
                 backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
                 allowTelemetryCollection: false
