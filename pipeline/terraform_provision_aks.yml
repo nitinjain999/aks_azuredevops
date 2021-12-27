@@ -28,7 +28,7 @@ stages:
           targetPath: '$(System.DefaultWorkingDirectory)/terraform-manifests'
           artifact: 'terraform-manifests-out'
           publishLocation: 'pipeline'
-      - task: TerraformInstaller@0
+      - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
         displayName: 'Terraform Install'
         inputs:
           terraformVersion: 1.1.2
