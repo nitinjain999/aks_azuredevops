@@ -29,9 +29,9 @@ stages:
           artifact: 'terraform-manifests-out'
           publishLocation: 'pipeline'
       - task: TerraformInstaller@0
-        displayName: Terraform Install
+        displayName: 'Terraform Install'
         inputs:
-          terraformVersion: '1.1.2'
+          terraformVersion: 1.1.2
       - task: TerraformCLI@0
         displayName: Terraform Init
         inputs:
