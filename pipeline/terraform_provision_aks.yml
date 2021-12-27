@@ -74,7 +74,7 @@ stages:
               displayName: Download SSH Key
               name: sshkey
               inputs:
-                secureFile: 'aks-terraform-devops-ssh-key-ububtu.pub'
+                secureFile: 'id_ed25519.pub'
             - task: TerraformCLI@0
               displayName: Terraform Init
               inputs:
@@ -125,7 +125,7 @@ stages:
               displayName: Download SSH Key
               name: sshkey
               inputs:
-                secureFile: 'aks-terraform-devops-ssh-key-ububtu.pub'
+                secureFile: 'id_ed25519.pub'
             - task: TerraformCLI@0
               displayName: Terraform Init
               inputs:
