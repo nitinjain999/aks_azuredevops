@@ -98,10 +98,10 @@ stages:
             - task: TerraformCLI@0
               displayName: Terraform Apply
               inputs:
-                command: 'apply'
+                command: 'apply -lock=false'
                 workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                 environmentServiceName: 'nitinjainazuredevopssvccon'
-                commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out -lock=false'
+                commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
 
 # Stage-2: Deploy Stages for Dev & QA
@@ -149,8 +149,8 @@ stages:
             - task: TerraformCLI@0
               displayName: Terraform Apply
               inputs:
-                command: 'apply'
+                command: 'apply -lock=false'
                 workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                 environmentServiceName: 'nitinjainazuredevopssvccon'
-                commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(QA_ENVIRONMENT)-$(Build.BuildId).out -lock=false'
+                commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(QA_ENVIRONMENT)-$(Build.BuildId).out'
                 allowTelemetryCollection: false
