@@ -98,7 +98,7 @@ stages:
             - task: TerraformCLI@0
               displayName: Terraform Apply
               inputs:
-                command: 'apply -lock=false'
+                command: 'apply'
                 workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                 environmentServiceName: 'nitinjainazuredevopssvccon'
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
@@ -149,7 +149,7 @@ stages:
             - task: TerraformCLI@0
               displayName: Terraform Apply
               inputs:
-                command: 'apply -lock=false'
+                command: 'apply'
                 workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                 environmentServiceName: 'nitinjainazuredevopssvccon'
                 commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(QA_ENVIRONMENT)-$(Build.BuildId).out'
