@@ -29,15 +29,8 @@ variable "environment" {
 
 # SSH Public Key for Linux VMs
 variable "ssh_public_key" {
+  default = "nitin.pub"
   description = "This variable defines the SSH Public Key for Linux k8s Worker nodes"  
-}
-resource "tls_private_key" "example" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
-}
-resource "aws_key_pair" "generated_key" {
-  key_name   = var.ssh_public_key
-  public_key = tls_private_key.example.public_key_openssh
 }
 
 # Windows Admin Username for k8s worker nodes
