@@ -29,7 +29,7 @@ variable "environment" {
 
 # SSH Public Key for Linux VMs
 variable "ssh_public_key" {
-  #default = "~/.ssh/aks-prod-sshkeys-terraform/aksprodsshkey.pub"
+  default = "./nitin.pub"
   description = "This variable defines the SSH Public Key for Linux k8s Worker nodes"  
 }
 # Windows Admin Username for k8s worker nodes
